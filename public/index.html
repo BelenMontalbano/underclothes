@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Head todo la info que es para el navegador y no se ve, salvo el titulo. -->
+	<meta charset="UTF-8">
+	<title>Under Clothes</title>
+	<!-- Estilos de Bootstrap que es codigo responsive y visual ya escrito por otro. -->
+	<!-- codigo de colores y estilos escrito por nosotros -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Tipografia openSans -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+	<!-- esto es para que el navegador se de cuenta cuando estamos en un celuar o tableta-->
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+</head>
+<!-- <body> Todo lo que se ve en la pantalla del usuario -->
+
+<body>
+	<header>
+		<div class="header_container">
+			<!-- en esta linea cambiamos nuestro logo. -->
+			<a href="#home" data-ancla="home" class="off">
+				<img src="images/logo.svg" alt="" class="logo"></a>
+			<ul class='menu'>
+				<li><a href="#nosotros" data-ancla="nosotros">Nosotros</a></li>
+				<li><a href="#servicios" data-ancla="servicios">Diseños</a></li>
+				<li><a href="#contacto" data-ancla="contacto">Contacto</a></li>
+			</ul>
+		</div>
+		</div>
+	</header>
+
+	<div class="principal vertical-centered-text" id="home">
+		<div>
+			<div class="title_container">
+				<h1 class="titulo_principal">Under Clothes</h1>
+
+				<p>Ventas por mayor y menor | Envíos a todo el país</p>
+				<a href="https://www.instagram.com/under.clothes.shop/" class="boton"> VER
+					CATALOGO </a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nosotros" id="nosotros">
+		<div class="container">
+			<h1>Sobre nosotros</h1>
+			<p>Somos un equipo de amigos que un día decidió emprender, bancamos la industria local y el buen diseño.
+				Trabajamos juntos para ofrecer lo mejor. </p>
+			Bienvenidos a nuestra casa.
+		</div>
+	</div>
+
+
+	<div class="container servicios" id="servicios">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Nuestros servicios</h1>
+			</div>
+		</div>
+		<div class="cards_container">
+			<div class="card_container">
+				<img src="images/entregas-toto-el-pais.svg" alt="">
+				<h3>Envíos seguros</h3>
+				<p>Tenemos la mejor logística. Hacemos envíos rápidos y seguros a todo el país.
+				</p>
+			</div>
+			<div class="card_container">
+				<img src="images/la-mejor-atencion.svg" alt="">
+				<h3>La mejor atención</h3>
+				<p>Amamos lo que hacemos, por eso nuestra atención es personalizada.</p>
+			</div>
+			<div class="card_container">
+				<img src="images/calidad.svg" alt="">
+				<h3>Calidad garantizada</h3>
+				<p>Trabajamos con los mejores productos para asegurarte la mejor calidad.</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="container" id="contacto">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>CONTACTO</h1><br><br>
+
+				</div>
+			</div>
+			<div class="redes_sociales">
+				<div class="red_social">
+					<a href="mailto:under.indumentaria@gmail.com"><img class="imagen" src="images/001-mail.svg"
+							alt=""></a>
+				</div>
+				<div class="red_social">
+					<a href="https://www.facebook.com/maliciousculebrametal" target="_blank">
+						<img class="imagen" src="images/002-facebook-logo.svg" alt="">
+					</a>
+				</div>
+
+
+				<div class="red_social">
+					<a target="_blank" href="https://www.instagram.com/jonatanariste/"><img class="imagen"
+							src="images/003-instagram-social-network-logo-of-photo-camera.svg" alt=""></a>
+				</div>
+			</div>
+	</footer>
+	<!-- Codigo que hace que las acciones de botones y cuestiones responsive funcionen-->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+		integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+		crossorigin="anonymous"></script>
+	<script>
+		// A $( document ).ready() block.
+		$(document).ready(function () {
+			$('.top a').click(function (e) {
+				e.preventDefault();
+				var offset = $($(this).attr('href')).offset().top;
+				$('html, body').animate({ scrollTop: offset }, 600);
+				return false;
+			});
+
+		});
+
+	</script>
+</body>
+
+</html>
